@@ -1,4 +1,5 @@
 import { CometChat } from "@cometchat-pro/chat";
+import { CometChatUI } from "./cometchat-pro-react-ui-kit/CometChatWorkspace/src/components";
 
 // const appID = process.env.REACT_COMETCHAT_APP_ID;
 const appID = '2507764710a3925c';
@@ -27,8 +28,8 @@ CometChat.init(appID, appSetting).then(
 //  >>>Create user function
 // let authKey = process.env.REACT_COMETCHAT_AUTH_KEY;
 let authKey = '7c3647de908c6af2ffca23b005806341a3a94314';
-var uid = "user1";
-var name = "Driss";
+var uid = "superhero3";
+var name = "Spiderman";
 
 // var user = new CometChat.User(uid);
 // user.setName(name);
@@ -52,7 +53,11 @@ CometChat.login(uid, authKey).then(
   }
 );
 function App() {
-  return <h1>CometCHat App React Exmaple</h1>;
+  return (
+    <div style={{ width: 'auto', height: '100vh'}}>
+      <CometChatUI />
+    </div>
+  )
 }
 
 export default App;
